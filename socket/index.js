@@ -1,7 +1,8 @@
 const server = require("http").Server();
 const port = 10001;
 
-var io = require('socket.io')(server, { origins: '*:*'})
+var io = require('socket.io')(server);
+io.origins('*:*');
 
 var names = [];
 var msgs = [];
